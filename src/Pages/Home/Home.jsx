@@ -1,0 +1,17 @@
+import { FcBusinessContact } from 'react-icons/fc';
+import { PiPhoneCallFill } from 'react-icons/pi';
+import { HomePageStyled, HomeTitleStyled, HomeTitleWrapStyled, PnoneSvgStyled } from './Home.styled';
+
+export default function Home() {
+  return (
+    <HomePageStyled>
+      <HomeTitleWrapStyled>
+      <HomeTitleStyled>Welcome to your Phonebook app </HomeTitleStyled>
+      <PnoneSvgStyled>
+      <FcBusinessContact size={64} />
+        <PiPhoneCallFill size={64} />
+      </PnoneSvgStyled>
+      </HomeTitleWrapStyled>
+    </HomePageStyled>
+  );
+}
