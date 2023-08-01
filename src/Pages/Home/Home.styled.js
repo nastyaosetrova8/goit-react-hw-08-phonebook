@@ -1,11 +1,18 @@
 import styled from "styled-components";
 
 
-
-export const HomePageStyled = styled.div`
-background-color: rgb(211, 211, 245);
+export const PagesStyled = styled.div`
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+background-image: radial-gradient(circle, rgba(151,169,235,0.30996148459383754) 0%, rgba(223,212,247,0.27354691876750703) 100%);
+min-height: 100vh;
+background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 `;
-
 
 export const HomeTitleWrapStyled = styled.div`
   display: flex;

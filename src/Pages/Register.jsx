@@ -1,13 +1,14 @@
 import { RegisterForm } from "components/RegisterForm/RegisterForm";
+import { PagesStyled } from "./Home/Home.styled";
 
 
 export default function Register() {
     return (
-      <div>
+      <PagesStyled>
         <h1>
           <title>Registration</title>
         </h1>
         <RegisterForm />
-      </div>
+      </PagesStyled>
     );
   }
