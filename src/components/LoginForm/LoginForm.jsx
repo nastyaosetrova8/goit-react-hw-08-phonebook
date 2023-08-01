@@ -34,7 +34,7 @@ return (
           {/* <input type="password" name="password" /> */}
 
         </AuthLabelStyled>
-        <ButtonStyled type="submit">Log In</ButtonStyled>
+        <ButtonStyled type="submit">Sign In</ButtonStyled>
       </AuthFormStyled>
     );
 

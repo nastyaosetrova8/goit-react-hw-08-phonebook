@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { ContactListStyled } from './ContactStyled';
+import { ButtonUserStyled } from 'components/UserMenu/UserMenu.styled';
 
 
 const Contact = (props) => {
@@ -9,7 +10,7 @@ const Contact = (props) => {
       <ContactListStyled>
         <p>{contact.name}:</p>
         <p>{contact.number}</p>
-        <button onClick={() => deleteContact(contact.id)}>Delete</button>
+        <ButtonUserStyled onClick={() => deleteContact(contact.id)}>Delete</ButtonUserStyled>
       </ContactListStyled>
     );
   };

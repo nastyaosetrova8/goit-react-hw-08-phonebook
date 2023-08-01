@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { filterContacts } from "redux/contactsSlice";
 import { addContactThunk, deleteContactThunk, getAllContactsThunk } from "redux/contactsThunks";
 import { selectContacts, selectError, selectFilter, selectIsLoading } from "redux/selectors";
+import { PagesStyled } from "./Home/Home.styled";
 
 
 
@@ -52,7 +53,7 @@ const filteredContacts = items.filter(contact =>
 
 
   return (
-<div>
+<PagesStyled>
   <Section title ="Phonebook">
     <ContactForm 
     onFormSubmit={addContact}
@@ -85,6 +86,6 @@ const filteredContacts = items.filter(contact =>
     deleteContact={deleteContact}
      />
       )}
-     </div>
+     </PagesStyled>
   )
 };
