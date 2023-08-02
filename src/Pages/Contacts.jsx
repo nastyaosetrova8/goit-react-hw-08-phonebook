@@ -5,25 +5,27 @@ import Loader from "components/Loader/Loader";
 import Section from "components/Section/Section";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { filterContacts } from "redux/contactsSlice";
-import { addContactThunk, deleteContactThunk, getAllContactsThunk } from "redux/contactsThunks";
-import { selectContacts, selectError, selectFilter, selectIsLoading } from "redux/selectors";
+import { addContactThunk, deleteContactThunk, getAllContactsThunk } from "redux/contacts/contactsThunks";
+import { selectContacts, selectError, selectFilter, selectIsLoading } from "redux/contacts/selectors";
 import { PagesStyled } from "./Home/Home.styled";
-
+import { selectUser } from "redux/auth/selectors";
+import { filterContacts } from "redux/contacts/contactsSlice";
 
 
 export default function Contacts() {
-    
-const isLoading = useSelector(selectIsLoading);
-const error = useSelector(selectError);
+ 
+const dispatch = useDispatch();
 const items = useSelector(selectContacts);
 const filter = useSelector(selectFilter);
-const dispatch = useDispatch();
+const user = useSelector(selectUser);
+const isLoading = useSelector(selectIsLoading);
+const error = useSelector(selectError);
 
 
 useEffect(() => {
+  if (!user) return;
   dispatch(getAllContactsThunk())
-}, [dispatch]);
+}, [dispatch, user]);
 
 const addContact = (contactData) => {
   const existContact = items.find(contact => 

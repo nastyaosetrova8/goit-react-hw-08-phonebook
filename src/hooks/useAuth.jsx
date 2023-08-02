@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectIsLoggedIn, selectIsRefreshing, selectUser } from "redux/auth/selectors";
-import { selectError, selectIsLoading } from "redux/selectors";
+import { selectError, selectIsLoading } from "redux/contacts/selectors";
 
 
 export const useAuth = () => {
